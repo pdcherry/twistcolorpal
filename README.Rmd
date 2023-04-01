@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+<!-- README.md is generated from README.Rmd. Edit README.Rmd and knit. -->
+
+```{r setup, include = FALSE, warning = FALSE, message = FALSE}
+library(palmerpenguins)
+library(tidyverse)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ggtwist
+Thematic Twist Bioscience color palettes for ggplot2
+
+## Brief Description
+```{r}
+green_ngs_palette();
+scales::show_col(green_ngs_palette(), cex_label = 2)
+```
+
+## Installation
+
+## Examples
+### Penguins generic data
+```{r}
+penguins %>% 
+  filter(!is.na(sex)) %>% 
+  ggplot(aes(x = sex, y = body_mass_g, color = bill_depth_mm)) +
+  geom_jitter(size = 3, width = 0.3) +
+  scale_color_penguin_c(palette = "highlight", direction = -1) +
+  labs(title = "Bill depth and body mass by sex",
+       y = "Body mass (g)",
+       color = "Bill depth (mm)") +
+  theme_linedraw() +
+  theme(axis.ticks = element_blank(),
+        axis.title.x = element_blank(),
+        panel.grid.major.x = element_blank())
+```
+
+
+## Palettes
+
