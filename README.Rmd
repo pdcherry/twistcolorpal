@@ -112,5 +112,5 @@ golds_palette();
 scales::show_col(golds_palette(), cex_label = 1)
 ```
 
-Questions? Concerns? Contact Patrick at pcherry@twistbioscience.com .
+Questions? Concerns? Contact Patrick at pcherry@twistbioscience.com.
 Did you use these to make nice plots? Did you present them? Let me know; I'd love to hear. <3
