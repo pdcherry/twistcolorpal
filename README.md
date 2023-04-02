@@ -23,15 +23,20 @@ scales::show_col(green_ngs_palette(), cex_label = 1)
 ## Installation
 
 Use devtools or remotes to install from Twist Bioscience’s private
-github. Alternatively, download the package zip and use devtools to
-install from
+github. Twist’s Github is private, so use the [Personal access tokens
+page](https://github.com/settings/tokens) to generate an access token
+and paste it in between the quotes of `auth_token = ""` in the
+`install_github()` command.
 
 ``` r
 if (!require(devtools)) install.packages("devtools")
-devtools::install_github("Twistbioscience/twist-color-pal")
+devtools::install_github("Twistbioscience/twist-color-pal", auth_token = "")
 ```
 
 ### Alternative installation
+
+Alternatively, download the package zip and use devtools to install from
+the local .zip.
 
 ``` r
 if (!require(devtools)) install.packages("devtools")

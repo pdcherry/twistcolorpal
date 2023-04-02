@@ -1,9 +1,9 @@
 Package: ggtwist
 Title: Thematic Twist Bioscience color palettes for ggplot2
 Version: 0.0.0.9000
-Authors@R: 
-    person("Patrick", "Cherry", "pcherry@twistbioscience", role = c("aut", "cre"),
+Authors@R: person("Patrick", "Cherry", "pcherry@twistbioscience", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6421-2035"))
+Maintainer: Patrick Cherry <pcherry@twistbioscience.com>
 Description: Thematic Twist Bioscience color palettes for ggplot2. The package `twist_color_pal` provides the `ggplot2` functions `scale_color_twist` and `scale_fill_twist` to automatically and flexibly add Twist Bioscience brand colors to plots.
 License: `use_gpl3_license()`
 Encoding: UTF-8
