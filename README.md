@@ -145,6 +145,6 @@ scales::show_col(golds_palette(), cex_label = 1)
 
 <img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
 
-Questions? Concerns? Contact Patrick at <pcherry@twistbioscience.com> .
+Questions? Concerns? Contact Patrick at <pcherry@twistbioscience.com>.
 Did you use these to make nice plots? Did you present them? Let me know;
 I’d love to hear. \<3
