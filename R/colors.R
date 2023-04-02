@@ -1,5 +1,4 @@
 #' A Twist brand thematic color palette generator for ggplot
-
 #' Function to extract Twist colors as hex codes
 #'
 #' @param ... Character names of Twist colors for each product theme 
@@ -157,36 +156,38 @@ twist_color_pal <- function(palette = "green_ngs", reverse = FALSE, ...) {
   colorRampPalette(pal, ...)
 }
 
-twist_palette <- function(palette = "main", ...) {}
+#' Color scale constructor for twist_color_pal colors
+#'
+#' @param palette Character name of palette in twist_palettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale() or
+#'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
+#'
+scale_color_twist <- function(palette = "green_ngs", discrete = TRUE, reverse = FALSE, ...) {
+  pal <- twist_color_pal(palette = palette, reverse = reverse)
+  
+  if (discrete) {
+    discrete_scale("color", paste0(palette, "_palette"), palette = pal, ...)
+  } else {
+    scale_color_gradientn(colors = pal(256), ...)
+  }
+}
 
-palette_gen <- function(palette = "main", direction = 1) {}
-
-# helper function
-palette_gen_c <- function(palette = "main", direction = 1, ...) {}
-
-# the actual ggplot functions
-## discrete scales
-scale_fill_penguin_d <- function(palette = "main", direction = 1, ...) {}
-
-scale_colour_penguin_d <- function(palette = "main", direction = 1, ...) {}
-
-## continuous scales
-scale_color_penguin_c <- function(palette = "main", direction = 1, ...) {}
-
-scale_fill_penguin_c
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#' Fill scale constructor for twist_color_pal colors
+#'
+#' @param palette Character name of palette in twist_color_pal_palettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale() or
+#'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
+#'
+scale_fill_twist <- function(palette = "green_ngs", discrete = TRUE, reverse = FALSE, ...) {
+  pal <- twist_color_pal(palette = palette, reverse = reverse)
+  
+  if (discrete) {
+    discrete_scale("fill", paste0(palette, "_palette"), palette = pal, ...)
+  } else {
+    scale_fill_gradientn(colors = pal(256), ...)
+  }
+}
