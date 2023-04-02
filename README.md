@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Edit README.Rmd and knit. -->
 
-# twist-color-pal
+# twistcolorpal
 
 Thematic Twist Bioscience color palettes for ggplot2 By Patrick Cherry
 
 ## Brief Description
 
-The R package `twist_color_pal` provides the `ggplot2` functions
+The R package `twistcolorpal` provides the `ggplot2` functions
 `scale_color_twist` and `scale_fill_twist` to automatically and flexibly
 add Twist Bioscience brand colors to plots.
 
@@ -62,7 +62,7 @@ penguins %>%
 
 ``` r
 penguins %>%
-  filter(!is.na(sex)) %>%
+  filter(!is.na(body_mass_g)) %>%
   ggplot(aes(x = species, y = body_mass_g, color = island)) +
   geom_point(size = 2,
               position = position_jitterdodge(jitter.width = 0.4)) +
@@ -76,7 +76,6 @@ penguins %>%
 
 ``` r
 penguins %>%
-  #filter(!is.na(sex)) %>%
   ggplot(aes(x = year, fill = species)) +
   geom_bar(position = position_dodge()) +
   scale_fill_twist(palette = "pink_biopharma") +

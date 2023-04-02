@@ -1,4 +1,4 @@
-Package: ggtwist
+Package: twistcolorpal
 Title: Thematic Twist Bioscience color palettes for ggplot2
 Version: 0.0.0.9000
 Authors@R: c(person("Patrick", "Cherry", , "pcherry@twistbioscience", role = c("aut", "cre"),
