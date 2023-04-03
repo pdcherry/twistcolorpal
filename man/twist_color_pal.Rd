@@ -7,7 +7,7 @@
 twist_color_pal(palette = "green_ngs", reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in drsimonj_palettes}
+\item{palette}{Character name of palette in twist_palettes for twist_color_pal}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 
