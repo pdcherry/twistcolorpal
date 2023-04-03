@@ -2,8 +2,7 @@
 % Please edit documentation in R/colors.R
 \name{green_ngs_palette}
 \alias{green_ngs_palette}
-\title{A Twist brand thematic color palette generator for ggplot
-Function to extract Twist colors as hex codes}
+\title{A Twist brand thematic color palette generator for ggplot}
 \usage{
 green_ngs_palette(...)
 }
@@ -11,6 +10,5 @@ green_ngs_palette(...)
 \item{...}{Character names of Twist colors for each product theme}
 }
 \description{
-A Twist brand thematic color palette generator for ggplot
 Function to extract Twist colors as hex codes
 }

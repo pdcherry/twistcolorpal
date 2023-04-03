@@ -7,7 +7,7 @@
 scale_fill_twist(palette = "green_ngs", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in twist_color_pal_palettes}
+\item{palette}{Character name of palette in twist_palettes}
 
 \item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
 
