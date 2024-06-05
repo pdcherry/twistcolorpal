@@ -20,28 +20,28 @@ source("R/colors.R")
 ```
 
 # twistcolorpal
-Thematic Twist Bioscience color palettes for ggplot2
+Thematic Twist color palettes for ggplot2
 By Patrick Cherry
 
 ## Brief Description
-The R package `twistcolorpal` provides the `ggplot2` functions `scale_color_twist` and `scale_fill_twist` to automatically and flexibly add Twist Bioscience brand colors to plots.
+The R package `twistcolorpal` provides the `ggplot2` functions `scale_color_twist` and `scale_fill_twist` to automatically and flexibly add Twist colors to plots.
 ```{r}
 green_ngs_palette();
 scales::show_col(green_ngs_palette(), cex_label = 1)
 ```
 
 ## Installation
-Use devtools or remotes to install from Twist Bioscience's private github. Twist's Github is private, so use the [Personal access tokens page](https://github.com/settings/tokens) to generate an access token and paste it in between the quotes of ` auth_token = ""` in the `install_github()` command.
+Use devtools or remotes to install
 ```{r, eval = FALSE, echo = TRUE}
 if (!require(devtools)) install.packages("devtools")
-devtools::install_github("Twistbioscience/twist-color-pal", auth_token = "")
+devtools::install_github("pdcherry/twistcolorpal", auth_token = "")
 ```
 
 ### Alternative installation
 Alternatively, download the package zip and use devtools to install from the local .zip.
 ```{r, eval = FALSE, echo = TRUE}
 if (!require(devtools)) install.packages("devtools")
-devtools::install_local(path = "~/Downloads/twist-color-pal.zip")
+devtools::install_local(path = "~/Downloads/twistcolorpal.zip")
 ```
 
 ## Examples
@@ -57,7 +57,7 @@ penguins %>%
        color = "Bill depth (mm)")
 ```
 
-```{r}
+```{r, warning = FALSE}
 penguins %>%
   filter(!is.na(body_mass_g)) %>%
   ggplot(aes(x = species, y = body_mass_g, color = island)) +
@@ -112,5 +112,5 @@ golds_palette();
 scales::show_col(golds_palette(), cex_label = 1)
 ```
 
-Questions? Concerns? Contact Patrick at pcherry@twistbioscience.com.
+Questions? Concerns? Contact Patrick at pcherr [at] pm [dot] me.
 Did you use these to make nice plots? Did you present them? Let me know; I'd love to hear. <3

@@ -3,18 +3,21 @@
 
 # twistcolorpal
 
-Thematic Twist Bioscience color palettes for ggplot2 By Patrick Cherry
+Thematic Twist color palettes for ggplot2 By Patrick Cherry
 
 ## Brief Description
 
 The R package `twistcolorpal` provides the `ggplot2` functions
 `scale_color_twist` and `scale_fill_twist` to automatically and flexibly
-add Twist Bioscience brand colors to plots.
+add Twist colors to plots.
 
 ``` r
 green_ngs_palette();
 #>   NGS Green    UI Green Twist Green  Soft Green Light Green 
 #>   "#19805e"   "#04A973"   "#2AD39B"   "#AAEED7"   "#E1F9F1"
+```
+
+``` r
 scales::show_col(green_ngs_palette(), cex_label = 1)
 ```
 
@@ -22,15 +25,11 @@ scales::show_col(green_ngs_palette(), cex_label = 1)
 
 ## Installation
 
-Use devtools or remotes to install from Twist Bioscience’s private
-github. Twist’s Github is private, so use the [Personal access tokens
-page](https://github.com/settings/tokens) to generate an access token
-and paste it in between the quotes of `auth_token = ""` in the
-`install_github()` command.
+Use devtools or remotes to install
 
 ``` r
 if (!require(devtools)) install.packages("devtools")
-devtools::install_github("Twistbioscience/twist-color-pal", auth_token = "")
+devtools::install_github("pdcherry/twistcolorpal", auth_token = "")
 ```
 
 ### Alternative installation
@@ -40,7 +39,7 @@ the local .zip.
 
 ``` r
 if (!require(devtools)) install.packages("devtools")
-devtools::install_local(path = "~/Downloads/twist-color-pal.zip")
+devtools::install_local(path = "~/Downloads/twistcolorpal.zip")
 ```
 
 ## Examples
@@ -97,6 +96,9 @@ names(twist_palettes)
 grays_palette();
 #>         Black Primary Slate      UI Slate   Medium Gray   Light Gray  
 #>     "#0F0F10"     "#232E35"     "#354652"     "#98A8B3"     "#E0E5EB"
+```
+
+``` r
 scales::show_col(green_ngs_palette(), cex_label = 1)
 ```
 
@@ -106,6 +108,9 @@ scales::show_col(green_ngs_palette(), cex_label = 1)
 blue_oligo_pools_palette();
 #>  Deep Teal       Teal Oligo Blue   Sky Teal Light Blue 
 #>  "#144348"  "#2A8E97"  "#57C6D0"  "#A7E1E6"  "#E7F7F8"
+```
+
+``` r
 scales::show_col(blue_oligo_pools_palette(), cex_label = 1)
 ```
 
@@ -115,6 +120,9 @@ scales::show_col(blue_oligo_pools_palette(), cex_label = 1)
 purple_genes_palette();
 #>   Sea Purple       Violet Genes Purple        Lilac Light Purple 
 #>    "#3A30A1"    "#4A3FC6"    "#7676F3"    "#A6A6F7"    "#D5D5FB"
+```
+
+``` r
 scales::show_col(purple_genes_palette(), cex_label = 1)
 ```
 
@@ -124,6 +132,9 @@ scales::show_col(purple_genes_palette(), cex_label = 1)
 pink_biopharma_palette();
 #> Fierce Magenta       Magenta  Biopharma Pink          Rose      Light Pink 
 #>      "#8911B1"      "#AD15E0"      "#CF6AF1"      "#E5B0F8"      "#F9ECFD"
+```
+
+``` r
 scales::show_col(pink_biopharma_palette(), cex_label = 1)
 ```
 
@@ -135,6 +146,9 @@ orange_variant_library_palette();
 #>        "#8C4608"        "#BD5F0A"        "#ED770D"        "#F49138" 
 #>      Pale Citrus 
 #>        "#F9C79A"
+```
+
+``` r
 scales::show_col(orange_variant_library_palette(), cex_label = 1)
 ```
 
@@ -144,11 +158,14 @@ scales::show_col(orange_variant_library_palette(), cex_label = 1)
 golds_palette();
 #>        Gold1        Gold2  Data Yellow       Yellow Light Yellow 
 #>    "#8E6706"    "#BE8A09"    "#EFAD0B"    "#F6BF37"    "#FBE6B1"
+```
+
+``` r
 scales::show_col(golds_palette(), cex_label = 1)
 ```
 
 <img src="man/figures/README-unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" />
 
-Questions? Concerns? Contact Patrick at <pcherry@twistbioscience.com>.
-Did you use these to make nice plots? Did you present them? Let me know;
-I’d love to hear. \<3
+Questions? Concerns? Contact Patrick at pcherr \[at\] pm \[dot\] me. Did
+you use these to make nice plots? Did you present them? Let me know; I’d
+love to hear. \<3
